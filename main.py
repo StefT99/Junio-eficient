@@ -75,10 +75,11 @@ def login(driver):
             nr_oras=input('\nnumar oras:')
             nr_oras=int(nr_oras)-1
         
-        for nr_pagina in pagini:
-            if(nr_pagina.isnumeric()):
-                URL='https://junio.ro/dashboard/students/jobs/?page=' + str(nr_pagina)+'&type=&industry='
-                print_stagii_from(URL,orase[int(nr_oras)])
+        nr_pagini=int(pagini[len(pagini)-2])
+        for i in range(1,nr_pagini+1):
+                URL='https://junio.ro/dashboard/students/jobs/?page=' + str(i)+'&type=&industry='
+                print(URL)
+                #print_stagii_from(URL,orase[int(nr_oras)])
             
     else:
         print("user sau parola gresita")
