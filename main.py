@@ -77,9 +77,8 @@ def login(driver):
         
         nr_pagini=int(pagini[len(pagini)-2])
         for i in range(1,nr_pagini+1):
-                URL='https://junio.ro/dashboard/students/jobs/?page=' + str(i)+'&type=&industry='
-                print(URL)
-                #print_stagii_from(URL,orase[int(nr_oras)])
+            URL='https://junio.ro/dashboard/students/jobs/?page=' + str(i)+'&type=&industry='
+            print_stagii_from(URL,orase[int(nr_oras)])
             
     else:
         print("user sau parola gresita")
